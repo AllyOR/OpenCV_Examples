@@ -10,7 +10,7 @@ cv2.imwrite("images/Gauss.png", gauss)
 thresh = 50 
 		
 # Detectar los bordes con un umbral min = 50 y max = 150 
-canny_output = cv2.Canny(gray, thresh, thresh * 3)
+canny_output = cv2.Canny(gauss, thresh, thresh * 3)
 
 # Mostrar los bordes detectados con Canny
 cv2.imwrite("images/Bordes.png", canny_output)
