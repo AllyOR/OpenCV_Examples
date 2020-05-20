@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-src = cv2.imread("images/image.png")
+src = cv2.imread("images/opencv_logo.png")
 exit_src = np.uint16(src)
 
 # Defining the range of the colors (the dark and light red, blue and green)
@@ -11,7 +11,7 @@ hsv_max_red = np.array([10, 255, 255])
 #light red
 hsv_min_red2 = np.array([160, 100, 100]) 
 hsv_max_red2 = np.array([179, 255, 255])
-#blue
+#blue, you can enter it this way too
 hsv_min_blue = (100,65,75)
 hsv_max_blue = (130,255,255)
 #green
@@ -40,6 +40,10 @@ res_red = cv2.bitwise_and(src, src, exit_src, masks_red)
 masks_rb = cv2.add(masks_red, blue)
 res_rb = cv2.bitwise_and(src, src, exit_src, masks_rb)
 
+# Getting the Red, Green, Blue masks
+masks_rgb = cv2.add(masks_rb, green)
+res_rgb = cv2.bitwise_and(src, src, exit_src, masks_rgb)
+
 # Showing the resulting images
 cv2.imshow("images/Dark red images", dark_red)
 cv2.imshow("Light red images", light_red)
@@ -47,6 +51,8 @@ cv2.imshow("Tones of red", masks_red)
 cv2.imshow("Exit RED", res_red)
 
 cv2.imshow("Exit RED-BLUE", res_rb)
+
+cv2.imshow("Exit RED-GREEN-BLUE", res_rgb)
 
 print("======END=======")
 
