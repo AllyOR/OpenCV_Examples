@@ -12,11 +12,11 @@ hsv_max_red = np.array([10, 255, 255])
 hsv_min_red2 = np.array([160, 100, 100]) 
 hsv_max_red2 = np.array([179, 255, 255])
 #blue, you can enter it this way too
-hsv_min_blue = (100,65,75)
-hsv_max_blue = (130,255,255)
+hsv_min_blue = (100, 65, 75)
+hsv_max_blue = (130, 255, 255)
 #green
-hsv_min_green = (49,50,50)
-hsv_max_green = (107,255,255)
+hsv_min_green = (49, 50, 50)
+hsv_max_green = (107, 255, 255)
 
 # Applying the Gaussian smoothing function
 gauss = cv2.GaussianBlur(src, (5,5), 0)
@@ -54,5 +54,5 @@ cv2.imshow("Exit RED-BLUE", res_rb)
 
 cv2.imshow("Exit RED-GREEN-BLUE", res_rgb)
 
-print("======END=======")
+print("======END======")
 
