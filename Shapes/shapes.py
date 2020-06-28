@@ -1,11 +1,11 @@
 import cv2
 
-src = cv2.imread("images/coins.jpg", 1)
+src = cv2.imread("images/pic1.png", 1)
 img = cv2.imwrite("images/Original.png",src)
 gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
 
 # Applying the Gaussian smoothing
-gauss = cv2.GaussianBlur(gray, (5,5), 0)
+gauss = cv2.GaussianBlur(gray, (3,3), 0)
 cv2.imwrite("images/Gauss.png", gauss)
 thresh = 50 
 		
