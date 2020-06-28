@@ -31,4 +31,9 @@ print("End Negative")
 ### More Bright
 image = cv2.add(m, np.array([50.0]))
 cv2.imwrite('images/Brighter.png', image)
-print("End More bright")
+print("End Brighter")
+
+### Less Bright
+image = cv2.add(m, np.array([-100.0]))
+cv2.imwrite('images/Darker.png', image)
+print("End Darker")
