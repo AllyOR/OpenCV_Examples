@@ -22,4 +22,9 @@ noise_img = sp_noise(src,0.05)
 cv2.imwrite('images/sp_noise.jpg', noise_img)
 print("End Salt and pepper")
 
+### Negative
+m = src.copy()
+img_neg = 255 - m
+cv2.imwrite('images/Negative.png',img_neg)
+print("End Negative")
 
