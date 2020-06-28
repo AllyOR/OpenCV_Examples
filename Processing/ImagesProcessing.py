@@ -19,7 +19,7 @@ def sp_noise(src,prob):
 
 src = cv2.imread('images/lena.png') 
 noise_img = sp_noise(src,0.05)
-cv2.imwrite('images/sp_noise.jpg', noise_img)
+cv2.imwrite('images/Salt_pepper_noise.jpg', noise_img)
 print("End Salt and pepper")
 
 ### Negative
@@ -28,3 +28,7 @@ img_neg = 255 - m
 cv2.imwrite('images/Negative.png',img_neg)
 print("End Negative")
 
+### More Bright
+image = cv2.add(m, np.array([50.0]))
+cv2.imwrite('images/Brighter.png', image)
+print("End More bright")
