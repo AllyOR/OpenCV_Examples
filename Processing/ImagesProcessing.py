@@ -53,3 +53,22 @@ print("End Flip Horizontal")
 flipBoth = cv2.flip(src, -1)
 cv2.imwrite('images/Flipped_both.png', flipBoth)
 print("End Flip Both")
+
+## Version of Salt and pepper noise
+src = cv2.imread("images/lena.png")
+img = np.zeros(src.shape, np.uint8)
+
+z = 25000
+for x in range(z):
+    i = np.random.randint(src.shape[0])
+    j = np.random.randint(src.shape[1])
+    r = np.random.randint(2)
+    if r == 1:
+        img[i][j] = 255
+    else:
+        img[i][j] = 0
+        
+    img[i][j] = src[i][j]
+
+cv2.imwrite("images/Salt_pepper2.png", img)
+print("End Salt pepper 2")
