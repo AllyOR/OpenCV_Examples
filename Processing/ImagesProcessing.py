@@ -48,3 +48,8 @@ print("End Flip Vertical")
 flipHorizontal = cv2.flip(src, 1)
 cv2.imwrite('images/Flipped_horizontal.png', flipHorizontal)
 print("End Flip Horizontal")
+
+### Flip Both
+flipBoth = cv2.flip(src, -1)
+cv2.imwrite('images/Flipped_both.png', flipBoth)
+print("End Flip Both")
