@@ -43,3 +43,8 @@ src = cv2.imread('images/lena.png')
 flipVertical = cv2.flip(src, 0)
 cv2.imwrite('images/Flipped_vertical.png', flipVertical)
 print("End Flip Vertical")
+
+### Flip Horizontal
+flipHorizontal = cv2.flip(src, 1)
+cv2.imwrite('images/Flipped_horizontal.png', flipHorizontal)
+print("End Flip Horizontal")
