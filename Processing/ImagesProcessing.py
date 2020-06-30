@@ -37,3 +37,9 @@ print("End Brighter")
 image = cv2.add(m, np.array([-100.0]))
 cv2.imwrite('images/Darker.png', image)
 print("End Darker")
+
+### Flip Vertical
+src = cv2.imread('images/lena.png')
+flipVertical = cv2.flip(src, 0)
+cv2.imwrite('images/Flipped_vertical.png', flipVertical)
+print("End Flip Vertical")
