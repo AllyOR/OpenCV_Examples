@@ -31,8 +31,6 @@ while cap.isOpened():
             continue
             cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 255), 2)
 
-    # Display original frame
-    cv2.imshow('Motion Detector', frame1)
 
     # Display Diffrenciate Frame
     cv2.imshow('Difference Frame', thresh)
