@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-# capturing video
 cap = cv2.VideoCapture(0)
 # reading back-to-back frames(images) from video
 ret, frame1 = cap.read()
@@ -31,6 +30,8 @@ while cap.isOpened():
             continue
             cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 255), 2)
 
+    # Display original frame
+    cv2.imshow('Motion Detector', frame1)
 
     # Display Diffrenciate Frame
     cv2.imshow('Difference Frame', thresh)
@@ -38,14 +39,9 @@ while cap.isOpened():
     # Assign frame2(image) to frame1(image)
     frame1 = frame2
 
-    #Read new frame2
     ret, frame2 = cap.read()
-
-    # Press 'esc' for quit 
     if cv2.waitKey(40) == 27:
         break
 
-# Release cap resource
 cap.release()
-# Destroy all windows
 cv2.destroyAllWindows()
